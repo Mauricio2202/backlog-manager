@@ -1,0 +1,88 @@
+:root {
+  --primary-color: #4361ee;
+  --primary-dark: #3a56d4;
+  --secondary-color: #3f37c9;
+  --dark-color: #212529;
+  --darker-color: #1a1e21;
+  --light-color: #f8f9fa;
+  --lighter-color: #ffffff;
+  --gray-color: #dee2e6;
+  --pink-color: #ff0a54;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --border-radius: 12px;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+.tableroContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+.titleTablero {
+    color: var(--light-color);
+}
+
+.subtitleTablero {
+    color: var(--gray-color);
+}
+
+.sectionResources {
+    width: 300px;
+    height: 620px;
+    background-color: var(--darker-color);
+}
+
+.btnCreateBoard {
+    padding: 18px 20px;
+    background: var(--primary-color);
+    border: none;
+    font-size: 15px;
+    border-radius: 30px;
+    margin: 20px 70px;
+    width: 160px;
+    color: #dee2e6;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.btnCreateBoard:hover {
+    box-shadow: 0 0 30px #3a56d4;
+}
+
+.panelCentro {
+  position: fixed;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  
+  width: 600px;
+  max-width: 90%;
+  padding: 32px;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+
+  animation: aparecer 0.3s ease-in-out;
+  transform-origin: center;
+  text-align: center;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
